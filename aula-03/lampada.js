@@ -34,6 +34,17 @@ function quebrarLampada() {
     lampada.src = "img/quebrada.jpg"
     botoesLidaDesliga(true, true)
 }
+function piscar(){
+    var intervalo = 0;
+    var contador = 0;
+    while(contador < 10){
+        intervalo += 300;
+        setTimeout("document.getElementById"('lamp').src="img/ligada.jpg", intervalo)
+        intervalo +=300;
+        setTimeout("document.getElementById"('lamp').src="img/desligada.jpg", intervalo)
+        contador++;
+    }
+}
  
 //eventos
 document.getElementById('ligar').addEventListener("click", ligarLampada)
